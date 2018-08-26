@@ -8,5 +8,6 @@
 - Reload
 - Now all images are available offline
 
-## Licence
+## Licence
+
 MIT
