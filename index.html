@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Service worker demo</title>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.css">
+</head>
+
+<body class="bg-grey-light p-4">
+  <div class="p-16">
+    <h1>Cache image for offline</h1>
+    <input class="p-4 w-64 my-4 rounded-lg" type="text" id="imgurl" value="https://images.unsplash.com/photo-1534882039189-c85b94bf55ee?ixlib=rb-0.3.5&s=240f8caaa0a9f804b7c435e219af891f&auto=format&fit=crop&w=1950&q=80">
+    <button id="btn" class="h-10 px-4 mx-4 bg-indigo rounded-lg text-xl text-white hover:bg-purple-light">Load and Cache</button>
+  </div>
+
+  <div class="app block sm:flex">
+    <div class="p-4 flex-1">
+      <h3>Service worker in Chrome Extension</h3>
+      <p class="mb-4">The image below is cached:</p>
+      <img id="img" src="https://images.unsplash.com/photo-1534882039189-c85b94bf55ee?ixlib=rb-0.3.5&s=240f8caaa0a9f804b7c435e219af891f&auto=format&fit=crop&w=1950&q=80">
+    </div>
+    <div class="p-4 flex-1">
+      <h3>Iframe</h3>
+      <p class="mb-4">The image below is <strong>not</strong> cached:</p>
+      <iframe height="100%" width="100%" frameborder="0" id="iframe"></iframe>
+    </div>
+  </div>
+  <script src="demo.js"></script>
+  <script src="service-worker.js"></script>
+</body>
+
+</html>
